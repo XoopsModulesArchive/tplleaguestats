@@ -1,3 +1,2 @@
 <center>
-TPLLeagueStats by  <a href="http://www.web-udvikling.dk " target="_BLANK">Mithrandir</a> and <a href="http://www.madeinbanzi.it " target="_BLANK">ralf57</a> based on <a href="http://www.tpl-design.com/tplleaguestats" target="_BLANK">tplLeagueStats 1.03</a>
 </center>
