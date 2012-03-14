@@ -1,0 +1,72 @@
+TPLLeaguestats Module v 1.0beta
+13-Mar-2004
+------------------------------------
+SUPPORT FORUM IN:
+http://www.madeinbanzi.it/xoopsworld/modules/newbb/index.php
+------------------------------------
+
+INSTALLATION 
+************************************
+1. Unzip the folder "tplleaguestats" to yoursite/modules/  folder  on your server.
+2. Install the module as you usually do.
+3. Go to the modules admin and set the preferences from the module menu
+4. Now you are ready to go!!!
+
+LOGGING IN FOR THE FIRST TIME
+************************************
+-You must first add at least two teams to the database to access leaguamatches-page.
+
+MENU AND SEASON SELECTOR
+************************************
+With menu you can navigate through admin area and with season selector 
+you can change season you want to edit.
+
+SEASON CONTROL
+************************************
+You can add as much seasons as you like, thought seasons with 
+same name can not be added. Add new season simply by giving a 
+season name and clicking 'Add season'-button. New season name should 
+now appear on the right side of the page.
+
+Modify season by clicking it first from the list and then do necessary changes.
+Seasons are automatically published. If you don't want to publish specific 
+season, then uncheck the checkbox. If season is published, it is visible 
+at the actual statistics.
+
+If you want to delete a season, you must first delete all matches from it.
+
+TEAM CONTROL
+*************************************
+Control teams as seasons. There is a checkbox when you edit a team name.
+If checkbox is checked, it means that team is your team.
+
+ LEAGUE MATCH CONTROL
+*************************************
+
+Add matches:
+-choose a date
+-select teams from the dropdown menus (add final scores). Finally click
+'Add matches'
+-max 15 matches can be added to certain date each time
+-NOTICE: there can't be duplication entry for a team for one date!!
+
+Modify matches:
+-to choose all matches from certain date, click the date in the left
+-to choose single match, click home or away team
+
+Delete match:
+-click the home or away team in the left and choose 'delete'
+
+MINITABLE BLOCK
+**********************************
+TPLLeagueStats comes with a block
+showing the default season's ranking + goals for and against.
+It can be activated via blocks administration.
+
+TIPS
+*********************************
+If you want to give your team name another color
+instead of the default one,
+name you team for example <font color="#red">Your team</font>.
+This is not comfortable if you want to edit your team's name later 'cause there is 
+an issue with it that i hope to solve soon.
