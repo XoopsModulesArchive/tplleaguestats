@@ -32,4 +32,5 @@ define("_MI_TPLLS_ADMENU1","Seasons");
 define("_MI_TPLLS_ADMENU2","Teams");
 define("_MI_TPLLS_ADMENU3","Matches");
 
-?>
+define("_MI_TPLLS_ADMENU0","Home");
+define("_MI_TPLLS_ABOUT","About");

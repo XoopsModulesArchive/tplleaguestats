@@ -4,7 +4,7 @@
 TPLLeagueStats is a league stats software designed for football (soccer)
 team.
 
-Copyright (C) 2003  Timo Leppänen / TPL Design
+Copyright (C) 2003  Timo Leppï¿½nen / TPL Design
 email:     info@tpl-design.com
 www:       www.tpl-design.com/tplleaguestats
 
@@ -65,25 +65,6 @@ $d_points_add = isset($_POST['d_points_add']) ? $_POST['d_points_add'] : null;
 $d_points_modify = isset($_POST['d_points_modify']) ? $_POST['d_points_modify'] : null;
 
 xoops_cp_header();
-
-?>
-
-<!-- Navigation bar-->
-<table width="560" cellspacing="0" bordercolordark="white" bordercolorlight="black" style="border-collapse:collapse;">
-    <tr>
-        <td  align="center" style="padding: 3px;background-color: #FFFFFF; border:1px #000000 dotted;">
-            <a href="seasons.php"><?php echo _AM_NAVSEASONS;?></a></td>
-        <td  align="center" style="padding: 3px;background-color: #E6E6FF; border:1px #000000 dotted;">
-            <a href="opponents.php"><?php echo _AM_NAVOPPONENTS;?></a></td>
-        <td  align="center" nowrap style="padding: 3px;background-color: #FFFFFF; border:1px #000000 dotted;">
-            <a href="leaguematches.php"><?php echo _AM_NAVLEAGUEMATCHES;?></a></td>
-        <td  align="center" style="padding: 3px;background-color: #FFFFFF; border:1px #000000 dotted;">
-            <a href="../index.php" target="_blank"><?php echo _AM_NAVLEAGUETABLE;?></a></td>
-    </tr>
-</table>
-<!-- End Navigation bar-->
-
-<?php
 
 //
 //Add

@@ -4,7 +4,7 @@
 TPLLeagueStats is a league stats software designed for football (soccer)
 team.
 
-Copyright (C) 2003  Timo Leppänen / TPL Design
+Copyright (C) 2003  Timo Leppï¿½nen / TPL Design
 email:     info@tpl-design.com
 www:       www.tpl-design.com/tplleaguestats
 
@@ -63,25 +63,6 @@ $modifyall_submit = isset($_POST['modifyall_submit']) ? $_POST['modifyall_submit
 
 xoops_cp_header();
 
-?>
-
-<!-- Navigation bar-->
-<table width="560" cellspacing="0" bordercolordark="white" bordercolorlight="black" style="border-collapse:collapse;">
-    <tr>
-        <td  align="center" style="padding: 3px;background-color: #FFFFFF; border:1px #000000 dotted;">
-            <a href="seasons.php"><?php echo _AM_NAVSEASONS;?></a></td>
-        <td  align="center" style="padding: 3px;background-color: #FFFFFF; border:1px #000000 dotted;">
-            <a href="opponents.php"><?php echo _AM_NAVOPPONENTS;?></a></td>
-        <td  align="center" nowrap style="padding: 3px;background-color: #E6E6FF; border:1px #000000 dotted;">
-            <a href="leaguematches.php"><?php echo _AM_NAVLEAGUEMATCHES;?></a></td>
-        <td  align="center" style="padding: 3px;background-color: #FFFFFF; border:1px #000000 dotted;">
-            <a href="../index.php" target="_blank"><?php echo _AM_NAVLEAGUETABLE;?></a></td>
-    </tr>
-</table>
-<!-- End Navigation bar-->
-
-<?php
-
 //
 //Exit check, if there are less than 2 teams in database
 //
@@ -89,8 +70,7 @@ $query = $xoopsDB->query("SELECT OpponentID FROM ".$xoopsDB->prefix("tplls_oppon
 
 if($xoopsDB->getRowsNum($query) < 2)
 {
-    echo "<br><br>"._AM_ADDTWOTEAMS."<br><br>
-		<a href=\"opponents.php\">" ._AM_ADDTEAMS. "</a>";
+    redirect_header('opponents.php', 1, _AM_ADDTWOTEAMS);
     exit();
 }
 
@@ -488,13 +468,13 @@ elseif($delete_submit)
 		<select name="year">
 		<?php
 		//print the years
-		for($i = 1950 ; $i < 2010 ; $i++)
+		for($i = 1950 ; $i < 2020 ; $i++)
 		{
 		    if($i<10)
 		    {
 		        $i = "0".$i;
 		    }
-		    if($i == "2003")
+		    if($i == "2012")
 		    echo "<option value=\"$i\" SELECTED>$i</option>\n";
 		    else
 		    echo "<option value=\"$i\">$i</option>\n";
