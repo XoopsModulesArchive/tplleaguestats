@@ -1,0 +1,72 @@
+TPLLeaguestats Modulo v 1.0beta
+13-Mar-2004
+------------------------------------
+FORUM DI SUPPORTO SU:
+http://www.madeinbanzi.it/xoopsworld/modules/newbb/index.php
+------------------------------------
+
+INSTALLAZIONE 
+************************************
+1. Copia la cartella "tplleaguestats" in tuosito/modules/ .
+2. Installa il modulo come fai di solito.
+3. Vai in amministrazione moduli ed imposta le preferenze dal menu del modulo
+4. Ora sei pronto a partire!!!
+
+PRIMO ACCESSO DA AMMINISTRATORE
+************************************
+-Ti verrà chiesto di aggiungere almeno due squadre per prima cosa.
+
+SELEZIONE DELLE STAGIONI
+************************************
+Ogni volta che vuoi apportare dei cambiamenti o delle
+aggiunte ad una stagione,selezionala dal menu a tendina.
+
+CONTROLLO DELLE STAGIONI
+************************************
+Puoi aggiungere quante stagioni vuoi,con l'unica condizione che abbiano 
+nomi diversi.Le stagioni create sono elencate sulla destra.
+Le stagioni sono automaticamente pubblicate e quindi visibili
+nelle statistiche;se vuoi renderle "non publiche"
+togli il segno spunta dalla casella "Pubblicata".
+Selezionando "Stagione predefinita?",la stagione acquista la
+precedenza sulle altre nelle statistiche.
+Se vuoi cancellare una stagione,ricordati di cancellare prima
+tutti gli incontri che ne fanno parte.
+
+CONTROLLO SQUADRE
+*************************************
+La gestione delle squadre è simile a quella delle stagioni.
+Per ogni squadra puoi specificare se è la tua squadra
+ed aggiungere o sottrarre punti dalle classifiche.
+Es:  -5 toglie 5 punti alla squadra
+         5 aggiunge 5 punti alla squadra
+Questo è utile per far sì che le classifiche siano sempre aggiornate.
+
+
+ CONTROLLO INCONTRI
+*************************************
+Per ciascuna giornata,scegli la data e gli incontri(max 15 per volta)
+Ricorda che una squadra può figurare solo una volta per giornata.
+
+Modifica degli incontri:
+- per modificare una giornata fai click sulla data
+- per modificare un singolo incontro fai click sul match
+
+Cancellazione degli incontri:
+-è necessario che gli incontri siano eliminati uno alla volta 
+per far questo fai click su una delle due squadre e clicca su Cancella
+
+
+ BLOCCO MINICLASSIFICA
+**********************************
+TPLLeagueStats può mostrare classifica+goals fatti+goals subiti 
+della stagione predefinita in un blocco.
+Per l'attivazione del blocco segui la procedura standard.
+
+SUGGERIMENTI
+*********************************
+Se vuoi cambiare il nome della tua squadra
+inserisci per esempio <font color="#red">Your team</font> al posto del nome semplice.
+Questo escamotage non è perfetto in quanto,in fase di ulteriore modifica del nome,è 
+necessario reinserire <font color="#red">Your team</font> perchè non viene recuperato
+in automatico.(spero di risolvere presto il problema).
