@@ -19,17 +19,17 @@ $i++;
 
 $adminmenu[$i]['title'] = _MI_TPLLS_ADMENU1;
 $adminmenu[$i]['link'] = "admin/seasons.php";
-$adminmenu[$i]["icon"] = './images/icons/16/karm.png';
+$adminmenu[$i]["icon"] = './images/icons/32/karm.png';
 $i++;
 
 $adminmenu[$i]['title'] = _MI_TPLLS_ADMENU2;
 $adminmenu[$i]['link'] = "admin/opponents.php";
-$adminmenu[$i]["icon"] =  './images/icons/16/users.png';
+$adminmenu[$i]["icon"] =  './images/icons/32/users.png';
 $i++;
 
 $adminmenu[$i]['title'] = _MI_TPLLS_ADMENU3;
 $adminmenu[$i]['link'] = "admin/leaguematches.php";
-$adminmenu[$i]["icon"] =  './images/icons/16/game.png';
+$adminmenu[$i]["icon"] =  './images/icons/32/game.png';
 
 $i++;
 $adminmenu[$i]['title'] =  _MI_TPLLS_ABOUT;
