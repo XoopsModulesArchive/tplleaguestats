@@ -1,25 +1,48 @@
-README
-===========
+README FIRST
+-----------------------
 
-This module allows you to easily manage the league of your favourite team and show your supporters detailed statistics on multiple seasons too.
+TPLLeagueStats is a league stats software designed for football (soccer) team.
 
-Using a MySQL backend the program is fully featured and can be used to generate League, Form & Stats Tables.
+***********************************************************
+Copyright (C) 2003  Timo Leppänen / TPL Design
+email:     info@tpl-design.com
+www:       www.tpl-design.com/tplleaguestats
 
-Fixtures, Head to Head comparisons and Sequences are also catered for in various custom layouts.
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
 
-Installation is simple and straight forward with all updates to your league made online using a password protected admin page.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-Finally, and best of all...tplLeagueStats is Free Software released under the GNU/GPL license.
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
- Requirements
- _____________________________________________________________________
- 
-- XOOPS >= 2.5.0
-- PHP version >= 5.2.0
-- ModuleClasses in /Frameworks (download it from here: http://goo.gl/Bmknt)  
+************************************************************
+Ported to xoops by
+Mythrandir http://www.web-udvikling.dk
+and
+ralf57 http://www.madeinbanzi.it
 
-Install/uninstall
----------------------
-No special measures necessary, follow the standard installation process & extract the /marquee folder into the ../modules directory. Install the module through Admin -> System Module -> Modules.
+************************************************************
+Version 1.0beta | 29-Mar-2004
+************************************************************
+READ manual.txt for installing & other help!!!
+************************************************************
+Version history
 
-Detailed instructions on installing modules are available in the XOOPS Operations Manual: http://goo.gl/adT2i
+1.0beta: Mar 2003
+- first beta release
+
+************************************************************
+Features planned for the next release(s):
+- Add search feature
+- Add templates
+- Relate teams to seasons so each season has its teams
+**********************************************************
+If you have any bug or suggest please
+report it to http://www.madeinbanzi.it/xoopsworld/modules/newbb/index.php

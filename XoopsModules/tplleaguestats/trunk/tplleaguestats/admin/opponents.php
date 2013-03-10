@@ -4,7 +4,7 @@
 TPLLeagueStats is a league stats software designed for football (soccer)
 team.
 
-Copyright (C) 2003  Timo Leppï¿½nen / TPL Design
+Copyright (C) 2003  Timo Leppänen / TPL Design
 email:     info@tpl-design.com
 www:       www.tpl-design.com/tplleaguestats
 
@@ -30,7 +30,7 @@ ralf57 http://www.madeinbanzi.it
 
 ************************************************************
 */
-
+include_once 'admin_header.php';
 include '../../../include/cp_header.php'; //Include file, which checks for permissions and sets navigation
 
 if (isset($_POST['season_select'])) {
@@ -65,6 +65,9 @@ $d_points_add = isset($_POST['d_points_add']) ? $_POST['d_points_add'] : null;
 $d_points_modify = isset($_POST['d_points_modify']) ? $_POST['d_points_modify'] : null;
 
 xoops_cp_header();
+
+$indexAdmin = new ModuleAdmin();
+echo $indexAdmin->addNavigation('opponents.php');
 
 //
 //Add

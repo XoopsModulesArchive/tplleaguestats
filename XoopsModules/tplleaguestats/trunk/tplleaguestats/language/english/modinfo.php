@@ -24,13 +24,12 @@ define("_MI_PREFMAINCOLSBG","Cell background behind pld and Pts:");
 define("_MI_PREFTTABBGCOL","Background colour inside the table:");
 define("_MI_PREFTABBDRCOL","Border colour of the table:");
 define("_MI_MINITABLE", 'Minitable');
-define("_MI_MENU_HEAD2HEAD","head2head");
-define("_MI_MENU_SEASSTATS","season");
+define("_MI_MENU_HEAD2HEAD", "head2head");
+define("_MI_MENU_SEASSTATS", "season");
 
 //Admin menu
 define("_MI_TPLLS_ADMENU1","Seasons");
 define("_MI_TPLLS_ADMENU2","Teams");
 define("_MI_TPLLS_ADMENU3","Matches");
 
-define("_MI_TPLLS_ADMENU0","Home");
-define("_MI_TPLLS_ABOUT","About");
+?>

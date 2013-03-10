@@ -71,7 +71,8 @@ $last_update = date('d.m.Y @ H:i', $ludata['last_updated']);
 //
 
 
-if(!session_is_registered('defaultseasonid') || !session_is_registered('defaultshow') || !session_is_registered('defaulttable'))
+//if(!session_is_registered('defaultseasonid') || !session_is_registered('defaultshow') || !session_is_registered('defaulttable'))
+if ( !isset( $_SESSION['defaultseasonid'] ) || !isset( $_SESSION['defaultshow'] ) || !isset( $_SESSION['defaulttable'] ))
 {
     $_SESSION['defaultseasonid'] = $d_season_id;
     $_SESSION['defaultshow'] = $show_all_or_one;
@@ -971,7 +972,9 @@ elseif($defaulttable == 4)
 		    switch($sort)
 		    {
 		        case 'pts':
+                    if (isset($points)){
 		        array_multisort($points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
 		        break;
 		        
 		        case 'd':

@@ -4,7 +4,7 @@
 TPLLeagueStats is a league stats software designed for football (soccer)
 team.
 
-Copyright (C) 2003  Timo Leppï¿½nen / TPL Design
+Copyright (C) 2003  Timo Leppänen / TPL Design
 email:     info@tpl-design.com
 www:       www.tpl-design.com/tplleaguestats
 
@@ -30,7 +30,8 @@ ralf57 http://www.madeinbanzi.it
 
 ************************************************************
 */
-if(!isset($_SESSION['season_name']) || !isset($_SESSION['season_id']))
+//if(!session_is_registered('season_name') || !session_is_registered('season_id'))
+if ( !isset( $_SESSION['season_name'] ) || !isset( $_SESSION['season_id'] ) )
 {
 	echo "<form method=\"post\" action=\"leaguematches.php\">";
 	echo '<b><?php echo _AM_CHOSEASON;?></b>';
