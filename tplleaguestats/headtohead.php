@@ -62,7 +62,9 @@ if (!isset($_SESSION['defaulthomeid'])) {
 $defaulthomeid = intval($_SESSION['defaulthomeid']);
 $defaultawayid = intval($_SESSION['defaultawayid']);
 
-if(!session_is_registered || !session_is_registered('defaultseasonid'))
+//if(!session_is_registered || !session_is_registered('defaultseasonid'))
+if ( !isset( $_SESSION ) || !isset( $_SESSION['defaultseasonid'] ) )
+
 {
 	$_SESSION['defaultseasonid'] = $d_season_id;
 }
@@ -178,7 +180,11 @@ while($data = $xoopsDB->fetchArray($get_teams))
 <?php echo _LS_AWAYTEAM;?>
 <select name="away_id">
 <?php
+
+if ( mysql_num_rows($get_teams) >=1 )  {
 mysql_data_seek($get_teams, 0);
+
+//mysql_data_seek($get_teams, 0);
 while($data = $xoopsDB->fetchArray($get_teams))
 {
 	if($data['id'] == $defaultawayid)
@@ -186,7 +192,7 @@ while($data = $xoopsDB->fetchArray($get_teams))
 	else
 		echo"<option value=\"$data[id]\">$data[name]</option>\n";
 }
-
+}
 //$xoopsDB->freeRecordSet($get_teams);
 ?>
 </select> <input type="submit" class="button" value=">>" name="submit5">

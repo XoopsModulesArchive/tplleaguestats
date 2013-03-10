@@ -4,7 +4,7 @@
 TPLLeagueStats is a league stats software designed for football (soccer)
 team.
 
-Copyright (C) 2003  Timo Leppï¿½nen / TPL Design
+Copyright (C) 2003  Timo Leppänen / TPL Design
 email:     info@tpl-design.com
 www:       www.tpl-design.com/tplleaguestats
 
@@ -30,7 +30,7 @@ ralf57 http://www.madeinbanzi.it
 
 ************************************************************
 */
-
+include_once 'admin_header.php';
 include '../../../include/cp_header.php'; //Include file, which checks for permissions and sets navigation
 if (isset($_POST['season_select'])) {
     $season = explode("____",$_POST['season_select']);
@@ -63,6 +63,9 @@ $modifyall_submit = isset($_POST['modifyall_submit']) ? $_POST['modifyall_submit
 
 xoops_cp_header();
 
+$indexAdmin = new ModuleAdmin();
+echo $indexAdmin->addNavigation('leaguematches.php');
+
 //
 //Exit check, if there are less than 2 teams in database
 //
@@ -70,8 +73,10 @@ $query = $xoopsDB->query("SELECT OpponentID FROM ".$xoopsDB->prefix("tplls_oppon
 
 if($xoopsDB->getRowsNum($query) < 2)
 {
-    redirect_header('opponents.php', 1, _AM_ADDTWOTEAMS);
-    exit();
+//    echo "<br><br>"._AM_ADDTWOTEAMS."<br><br>
+//		<a href=\"opponents.php\">" ._AM_ADDTEAMS. "</a>";
+//    exit();
+    redirect_header("opponents.php",1,_AM_ADDTWOTEAMS);
 }
 
 if($add_submit)
@@ -468,13 +473,13 @@ elseif($delete_submit)
 		<select name="year">
 		<?php
 		//print the years
-		for($i = 1950 ; $i < 2020 ; $i++)
+		for($i = 1950 ; $i < 2010 ; $i++)
 		{
 		    if($i<10)
 		    {
 		        $i = "0".$i;
 		    }
-		    if($i == "2012")
+		    if($i == "2003")
 		    echo "<option value=\"$i\" SELECTED>$i</option>\n";
 		    else
 		    echo "<option value=\"$i\">$i</option>\n";
@@ -837,7 +842,8 @@ elseif($delete_submit)
 				<select name="year">
 				<?php
 				//Print the years
-				for($i = 1950 ; $i < 2010 ; $i++)
+//TODO: make this variable depending on actual year
+				for($i = 1950 ; $i < 2015 ; $i++)
 				{
 				    if($i<10)
 				    {

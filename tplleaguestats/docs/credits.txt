@@ -1,23 +1,4 @@
-Ported to xoops by
-Mythrandir http://www.web-udvikling.dk
-and 
-ralf57 http://www.madeinbanzi.it
+Credits
+===============
 
-************************************************************
-Version 1.0beta | 29-Mar-2004
-************************************************************
-READ manual.txt for installing & other help!!!
-************************************************************
-Version history
-
-1.0beta: Mar 2003
-- first beta release
-
-************************************************************
-Features planned for the next release(s):
-- Add search feature
-- Add templates
-- Relate teams to seasons so each season has its teams
-**********************************************************
-If you have any bug or suggest please
-report it to http://www.madeinbanzi.it/xoopsworld/modules/newbb/index.php
+Originally developed by by mithrandir & Ralf57, based on TPL League Stats 1.03 (www.tpl-design.com/tplleaguestats)

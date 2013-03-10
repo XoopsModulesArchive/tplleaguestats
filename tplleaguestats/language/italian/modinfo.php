@@ -23,9 +23,9 @@ define("_MI_PREFLISTTMBG","Colore di sfondo colonna delle squadre:");
 define("_MI_PREFMAINCOLSBG","Colore di sfondo colonna  giocate e Pti:");
 define("_MI_PREFTTABBGCOL","Colore di sfondo interno tabella:");
 define("_MI_PREFTABBDRCOL","Colore bordo della tabella:");
-define("_MI_MINITABLE","Miniclassifica");
-define("_MI_MENU_HEAD2HEAD","Testa a testa");
-define("_MI_MENU_SEASSTATS","Stagione");
+define("_MI_MINITABLE", "Miniclassifica");
+define("_MI_MENU_HEAD2HEAD", "Testa a testa");
+define("_MI_MENU_SEASSTATS", "Stagione");
 
 //Admin menu
 define("_MI_TPLLS_ADMENU1","Stagioni");

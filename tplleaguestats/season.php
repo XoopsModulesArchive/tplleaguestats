@@ -57,7 +57,8 @@ $tb_width = $xoopsModuleConfig['tablewidth'];
 //
 //Check if there are session variables registered
 //
-if(!session_is_registered('defaultseasonid'))
+//if(!session_is_registered('defaultseasonid'))
+    if ( !isset( $_SESSION['defaultseasonid'] ) )
 {
 	$_SESSION['defaultseasonid'] = $d_seasonid;
 }

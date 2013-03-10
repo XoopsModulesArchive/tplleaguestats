@@ -4,7 +4,7 @@
 TPLLeagueStats is a league stats software designed for football (soccer)
 team.
 
-Copyright (C) 2003  Timo Leppï¿½nen / TPL Design
+Copyright (C) 2003  Timo Leppänen / TPL Design
 email:     info@tpl-design.com
 www:       www.tpl-design.com/tplleaguestats
 
@@ -30,7 +30,7 @@ ralf57 http://www.madeinbanzi.it
 
 ************************************************************
 */
-
+include_once 'admin_header.php';
 include '../../../include/cp_header.php'; //Include file, which checks for permissions and sets navigation
 
 $seasonid = isset($_GET['season_id']) ? intval($_GET['season_id']) : 0;
@@ -47,6 +47,8 @@ $delete_submit = isset($_POST['delete_submit']) ? $_POST['delete_submit'] : fals
 
 xoops_cp_header();
 
+$indexAdmin = new ModuleAdmin();
+echo $indexAdmin->addNavigation('seasons.php');
 if($add_submit)
 {
     $name = $xoopsDB->quoteString(trim($_POST['name']));

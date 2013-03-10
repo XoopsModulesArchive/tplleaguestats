@@ -1,2 +1,3 @@
-<center>
+<br /><center>
+TPL League Stats - Powered by  <a href="http://xoops.org" target="_BLANK">XOOPS</a>
 </center>
