@@ -415,7 +415,7 @@ $get_seasons = $xoopsDB->query("SELECT * FROM ".$xoopsDB->prefix("tplls_seasonna
 	$i = 0;
 	while($data = $xoopsDB->fetchArray($maxhomewin))
 	{
-		if($i % 0)
+		if($i = 0)
 			$temp_color = $bg1;
 		else
 			$temp_color = $bg2;
@@ -505,7 +505,7 @@ $get_seasons = $xoopsDB->query("SELECT * FROM ".$xoopsDB->prefix("tplls_seasonna
 	$i = 0;
 	while($data = $xoopsDB->fetchArray($maxawaywin))
 	{
-		if($i % 0)
+		if($i = 0)
 			$temp_color = $bg1;
 		else
 			$temp_color = $bg2;
@@ -594,7 +594,7 @@ $get_seasons = $xoopsDB->query("SELECT * FROM ".$xoopsDB->prefix("tplls_seasonna
 	$i = 0;
 	while($data = $xoopsDB->fetchArray($maxgoals))
 	{
-		if($i % 0)
+		if($i = 0)
 			$temp_color = $bg1;
 		else
 			$temp_color = $bg2;

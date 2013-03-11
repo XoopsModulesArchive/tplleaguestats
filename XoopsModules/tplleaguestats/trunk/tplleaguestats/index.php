@@ -969,88 +969,125 @@ elseif($defaulttable == 4)
 		    //
 		    //What sort type is chosen?
 		    //
-		    switch($sort)
-		    {
-		        case 'pts':
-                    if (isset($points)){
-		        array_multisort($points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+            switch ($sort) {
+                case 'pts':
+                    if (isset($points)) {
+                        array_multisort($points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
                     }
-		        break;
-		        
-		        case 'd':
-		        array_multisort($diff, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'pld':
-		        array_multisort($pld, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'tw':
-		        array_multisort($wins, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC,  $goals_for, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses,$pld, SORT_DESC, SORT_NUMERIC, $team, $homedraws, $homeloses,$homewins, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'td':
-		        array_multisort($draws, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homeloses, $awaywins, $homedraws, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'tl':
-		        array_multisort($loses, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $awaywins, $awaydraws, $homeloses, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'tf':
-		        array_multisort($goals_for, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'ta':
-		        array_multisort($goals_against, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'hw':
-		        array_multisort($homewins, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC,  $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses,$pld, SORT_DESC, SORT_NUMERIC, $team, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'hd':
-		        array_multisort($homedraws, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'hl':
-		        array_multisort($homeloses, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'hf':
-		        array_multisort($homegoals, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'ha':
-		        array_multisort($homegoalsagainst, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'aw':
-		        array_multisort($awaywins, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'ad':
-		        array_multisort($awaydraws, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'al':
-		        array_multisort($awayloses, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		        
-		        case 'af':
-		        array_multisort($awaygoals, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoalsagainst);
-		        break;
-		        
-		        case 'aa':
-		        array_multisort($awaygoalsagainst, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals);
-		        break;
-		        
-		        default:
-		        array_multisort($points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
-		        break;
-		    }
-		    
-		    if($defaulttable == 1 || $defaulttable == 3)
+                    break;
+
+                case
+                    'd':
+                    if (isset($diff)) {
+                        array_multisort($diff, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'pld':
+                    if (isset($pld)) {
+                        array_multisort($pld, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'tw':
+                    if (isset($wins)) {
+                        array_multisort($wins, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homedraws, $homeloses, $homewins, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'td':
+                    if (isset($draws)) {
+                        array_multisort($draws, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homeloses, $awaywins, $homedraws, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case
+                    'tl':
+                    if (isset($loses)) {
+                        array_multisort($loses, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $awaywins, $awaydraws, $homeloses, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'tf':
+                    if (isset($goals_for)) {
+                        array_multisort($goals_for, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'ta':
+                    if (isset($goals_against)) {
+                        array_multisort($goals_against, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'hw':
+                    if (isset($homewins)) {
+                        array_multisort($homewins, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'hd':
+                    if (isset($homedraws)) {
+                        array_multisort($homedraws, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'hl':
+                    if (isset($homeloses)) {
+                        array_multisort($homeloses, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'hf':
+                    if (isset($homegoals)) {
+                        array_multisort($homegoals, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'ha':
+                    if (isset($homegoalsagainst)) {
+                        array_multisort($homegoalsagainst, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'aw':
+                    if (isset($awaywins)) {
+                        array_multisort($awaywins, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'ad':
+                    if (isset($awaydraws)) {
+                        array_multisort($awaydraws, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'al':
+                    if (isset($awayloses)) {
+                        array_multisort($awayloses, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'af':
+                    if (isset($awaygoals)) {
+                        array_multisort($awaygoals, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoalsagainst);
+                    }
+                    break;
+
+                case 'aa':
+                    if (isset($awaygoalsagainst)) {
+                        array_multisort($awaygoalsagainst, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals);
+                    }
+                    break;
+
+                default:
+                    if (isset($points)) {
+                        array_multisort($points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $goals_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $goals_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homegoals, $homegoalsagainst, $awaygoals, $awaygoalsagainst);
+                    }
+                    break;
+            }
+
+            if($defaulttable == 1 || $defaulttable == 3)
 		    {
 		        
 		        //
@@ -1460,41 +1497,58 @@ elseif($defaulttable == 4)
 		    //
 		    switch($sort)
 		    {
-		        case 'pts':
-		        array_multisort($points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $av_points, $win_pros, $draw_pros, $loss_pros, $team);
-		        break;
-		        
-		        case 'a_pts':
-		        array_multisort($av_points, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $win_pros, $draw_pros, $loss_pros, $team);
-		        break;
-		        
-		        case 'w':
-		        array_multisort($win_pros, SORT_DESC, SORT_NUMERIC, $av_points, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $draw_pros, $loss_pros, $team);
-		        break;
-		        
-		        case 'd':
-		        array_multisort($draw_pros, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $av_points, $win_pros, $loss_pros, $team);
-		        break;
-		        
-		        case 'l':
-		        array_multisort($loss_pros, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $av_points, $win_pros, $draw_pros, $team);
-		        break;
-		        
-		        case 'af':
-		        array_multisort($av_for, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $av_points, $win_pros, $draw_pros, $loss_pros, $team);
-		        break;
-		        
-		        case 'aa':
-		        array_multisort($av_against, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $pld, $av_points, $win_pros, $draw_pros, $loss_pros, $team);
-		        break;
-		        
-		        case 'agd':
-		        array_multisort($av_diff, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $av_points, $win_pros, $draw_pros, $loss_pros, $team);
-		        break;
-		        
-		        case 'pld':
-		        array_multisort($pld, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $av_points, $win_pros, $draw_pros, $loss_pros, $team);
-		        break;
+                case 'pts':
+                    if (isset($points)) {
+                        array_multisort($points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $av_points, $win_pros, $draw_pros, $loss_pros, $team);
+                    }
+                    break;
+
+                case 'a_pts':
+                    if (isset($av_points)) {
+                        array_multisort($av_points, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $win_pros, $draw_pros, $loss_pros, $team);
+                    }
+                    break;
+
+                case 'w':
+                    if (isset($av_pros)) {
+                        array_multisort($win_pros, SORT_DESC, SORT_NUMERIC, $av_points, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $draw_pros, $loss_pros, $team);
+                    }
+                    break;
+
+                case 'd':
+                    if (isset($draw_pros)) {
+                        array_multisort($draw_pros, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $av_points, $win_pros, $loss_pros, $team);
+                    }
+                    break;
+
+                case 'l':
+                    if (isset($loss_pros)) {
+                        array_multisort($loss_pros, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $av_points, $win_pros, $draw_pros, $team);
+                    }
+                    break;
+
+                case 'af':
+                    if (isset($av_for)) {
+                        array_multisort($av_for, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $av_points, $win_pros, $draw_pros, $loss_pros, $team);
+                    }
+                    break;
+                case 'aa':
+                    if (isset($av_against)) {
+                        array_multisort($av_against, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $pld, $av_points, $win_pros, $draw_pros, $loss_pros, $team);
+                    }
+                    break;
+
+                case 'agd':
+                    if (isset($av_diff)) {
+                        array_multisort($av_diff, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $pld, $av_points, $win_pros, $draw_pros, $loss_pros, $team);
+                    }
+                    break;
+
+                case 'pld':
+                    if (isset($pld)) {
+                        array_multisort($pld, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $av_diff, SORT_DESC, SORT_NUMERIC, $av_for, SORT_DESC, SORT_NUMERIC, $av_against, SORT_ASC, SORT_NUMERIC, $av_points, $win_pros, $draw_pros, $loss_pros, $team);
+                    }
+                    break;
 		        
 		    }
 		    

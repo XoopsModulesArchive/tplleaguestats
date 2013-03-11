@@ -3,3 +3,11 @@
 ---------------------------------------
 
 - Converted to XOOPS 2.5.5 Admin GUI (Mamba)
+- fixed: division by zero in: if ($i % 0)
+- fixed: lack of check for empty array in: array_multisort (Cesag/Mamba)
+
+---------------------------------------
+1.0   2005-10-01
+---------------------------------------
+
+- Release (Mithrander)
